@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import { AngularFire, FirebaseListObservable} from 'angularfire2';
+import { AngularFire } from 'angularfire2';
+import { Observable } from 'rxjs/Rx';
+import { Lesson } from './shared/model/lesson';
+
 @Injectable()
 export class AFDatasourceService {
-courses$: FirebaseListObservable<any[]>;
 
-constructor(af: AngularFire) {
-  this.courses$ = af.database.list('courses');
+constructor(private af: AngularFire) {
 }
-  getCourses() {
-    return this.courses$;
+getLessons(): Observable<Lesson[]> {
+    return this.af.database.list('lessons');
   }
 }

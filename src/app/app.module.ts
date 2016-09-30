@@ -7,6 +7,7 @@ import {firebaseConfig} from '../environments/firebase.config';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AFDatasourceService } from './af-datasource.service';
+import 'rxjs/add/operator/do';
 
 @NgModule({
   declarations: [
