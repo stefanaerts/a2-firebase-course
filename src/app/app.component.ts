@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-private title = 'hellob';
+//private title = 'hellob';
   // Initialize Firebase
 
 
